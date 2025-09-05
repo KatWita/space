@@ -1,0 +1,162 @@
+@use './typo' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: $barlow;
+}
+
+main {
+	min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $white;
+	font-family: $bellefair;
+}
+
+h1,
+h2,
+h3,
+button {
+	text-transform: uppercase;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	color: $blue-300;
+}
+
+.scroll-hidden {
+	overflow: hidden;
+}
+
+.container {
+	padding: 0 $spacing-24;
+	margin: 0 auto;
+}
+
+.page-styles {
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.page-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 7rem $spacing-24 $spacing-24;
+	text-align: center;
+}
+
+.page-headline {
+	display: flex;
+	align-items: center;
+	gap: $spacing-24;
+	color: $white;
+	font-size: $text-m;
+	font-family: $barlow-cond;
+	text-transform: uppercase;
+	letter-spacing: 0.15rem;
+
+	span {
+		opacity: 25%;
+	}
+}
+
+.text {
+	line-height: 180%;
+	margin: 0 auto;
+	max-width: 327px;
+	font-size: 0.938rem;
+}
+
+@media (width >= 33.75rem) {
+	.text {
+		font-size: 1rem;
+		max-width: 400px;
+	}
+}
+
+@media (width >= 48rem) {
+	body {
+		overflow: hidden;
+	}
+
+	.page-container {
+		padding: 8.5rem $spacing-40 $spacing-40;
+	}
+
+	.page-headline {
+		font-size: 1.25rem;
+		align-self: start;
+	}
+
+	.text {
+		max-width: 510px;
+	}
+}
+
+@media (width >= 51.25rem) {
+	body {
+		overflow: hidden;
+	}
+}
+
+@media (width >= 64rem) {
+	.page-container {
+		padding: 12rem $spacing-64 $spacing-48;
+		text-align: left;
+		height: 100dvh;
+	}
+
+	.page-headline {
+		align-self: start;
+		font-size: $text-xl;
+	}
+
+	.text {
+		margin: 0;
+		max-width: 445px;
+		font-size: $text-l;
+	}
+}
+
+@media (width >= 80rem) {
+	.page-container {
+		padding: 12rem 10.313rem $spacing-48;
+	}
+}
+
+@media (width >= 100rem) {
+	.page-container {
+		padding: 12.3rem 14rem $spacing-48;
+		margin: 0 auto;
+		max-width: 1520px;
+	}
+}

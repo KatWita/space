@@ -1,0 +1,238 @@
+@use '../typo' as *;
+
+.technology {
+	background-image: url('../../public/assets/technology/background-technology-mobile.jpg');
+	background-color: $blue-900;
+	position: relative;
+	padding-bottom: 3rem;
+
+	&__img {
+		&--mobile {
+			position: absolute;
+			display: block;
+			margin-top: 6.688rem;
+			width: 100%;
+			height: 258px;
+			left: 0;
+			object-fit: cover;
+		}
+
+		&--desktop {
+			display: none;
+		}
+
+		&--launch {
+			object-position: left bottom;
+		}
+
+		&--spacesport {
+			object-position: left -13vh;
+		}
+
+		&--capsule {
+			object-position: left center;
+		}
+	}
+
+	&__btns {
+		margin-top: 23.625rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: $spacing-16;
+	}
+
+	&__btn {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		border: 1px solid hsla(0, 0%, 100%, 0.25);
+		background: none;
+		color: $white;
+		font-family: $bellefair;
+		font-size: $text-l;
+		transition: all 0.3s;
+
+		&.active {
+			background-color: $white;
+			color: $blue-900;
+			border: 1px solid $white;
+		}
+	}
+
+	&__content {
+		margin-top: $spacing-40;
+	}
+
+	&__term,
+	&__name {
+		color: $white;
+		font-family: $bellefair;
+		text-transform: uppercase;
+		line-height: 120%;
+		margin-bottom: $spacing-16;
+	}
+
+	&__term {
+		font-size: $text-l;
+		opacity: 50%;
+	}
+
+	&__name {
+		font-size: $spacing-24;
+	}
+}
+
+@media (width >= 33.75rem) {
+	.technology {
+		background-image: url('../../public/assets/technology/background-technology-tablet.jpg');
+
+		&__img--spacesport {
+			object-position: left -45vw;
+		}
+	}
+}
+
+@media (width >= 48rem) {
+	.technology {
+		&__img {
+			height: 357px;
+
+			&--launch {
+				object-position: left bottom;
+			}
+
+			&--spacesport {
+				object-position: left -45vw;
+			}
+
+			&--capsule {
+				object-position: left center;
+			}
+		}
+
+		&__btns {
+			margin-top: 30rem;
+		}
+
+		&__btn,
+		&__term {
+			font-size: $spacing-24;
+		}
+
+		&__btn {
+			width: 56px;
+			height: 56px;
+		}
+
+		&__name {
+			font-size: $spacing-40;
+		}
+
+		.text {
+			min-height: 145px;
+		}
+	}
+}
+
+@media (width >= 64rem) and (orientation: landscape) {
+	.technology {
+		background-image: url('../../public/assets/technology/background-technology-desktop.jpg');
+
+		.page-container {
+			position: relative;
+			align-items: flex-start;
+		}
+
+		&__img {
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				position: absolute;
+				display: block;
+				right: 0;
+				height: 38%;
+			}
+		}
+
+		&__box,
+		&__content-box {
+			display: flex;
+		}
+
+		&__box {
+			flex-direction: row-reverse;
+			align-items: center;
+			margin-top: 175px;
+		}
+
+		&__content-box {
+			gap: 64px;
+		}
+
+		&__content {
+			margin-top: 0;
+		}
+
+		&__btns {
+			flex-direction: column;
+			justify-content: flex-start;
+			margin: 0;
+			gap: 32px;
+		}
+
+		&__btn {
+			cursor: pointer;
+		}
+
+		&__term {
+			font-size: $h4;
+		}
+
+		&__name {
+			font-size: $h3;
+		}
+
+		.text {
+			max-width: 490px;
+		}
+	}
+}
+
+@media (width >= 71.875rem) {
+	.technology__img--desktop {
+		height: 45%;
+	}
+}
+
+@media (width >= 80rem) {
+	.technology {
+		&__img--desktop {
+			height: 50%;
+		}
+
+		&__btn {
+			width: 80px;
+			height: 80px;
+			font-size: $h4;
+
+			&:hover {
+				border: 1px solid $white;
+			}
+		}
+	}
+}
+
+@media (width >= 90rem) {
+	.technology__img--desktop {
+		height: 65%;
+	}
+}
+
+@media (width >= 100rem) {
+	.technology__img--desktop {
+		right: -40px;
+	}
+}
